@@ -6,5 +6,5 @@ import { resolve } from 'node:path'
 export default defineConfig({
   plugins: [react()],
   server: { proxy: { '/api': 'http://localhost:8080' } },
-  build: { rollupOptions: { input: { main: resolve(import.meta.dirname, 'index.html'), viewer: resolve(import.meta.dirname, 'viewer.html') } } },
+  build: { rollupOptions: { input: { main: resolve(import.meta.dirname, 'index.html'), viewer: resolve(import.meta.dirname, 'viewer.html'), projectViewer: resolve(import.meta.dirname, 'project-viewer.html') } } },
 })

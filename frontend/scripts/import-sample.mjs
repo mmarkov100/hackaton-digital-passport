@@ -7,7 +7,7 @@ const errors = []
 page.on('pageerror', error => errors.push(error.message))
 page.on('response', response => { if (response.url().includes('/api/') && response.status() >= 400) errors.push(`${response.status()} ${response.url()}`) })
 await page.goto('http://127.0.0.1:5173/')
-const frame = page.frameLocator('iframe[title="Контур ЖБИ"]')
+const frame = page.frameLocator('iframe[title="Digital Passport"]')
 await frame.getByRole('button', { name: /Технический заказчик/ }).click()
 await frame.locator('.project-card').first().waitFor()
 const app = page.frame({ url: /passport\.html/ })

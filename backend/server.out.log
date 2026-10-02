@@ -1,0 +1,901 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:demo >--------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ demo >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ demo ---
+[INFO] skip non existing resourceDirectory C:\main\projects\hackaton\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ demo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-02T13:49:25.438+05:00  INFO 18956 --- [demo] [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 21.0.12.1 with PID 18956 (C:\main\projects\hackaton\backend\target\classes started by pikol in C:\main\projects\hackaton\backend)
+2026-10-02T13:49:25.441+05:00  INFO 18956 --- [demo] [           main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-02T13:49:25.441+05:00 DEBUG 18956 --- [demo] [           main] o.s.boot.SpringApplication               : Loading source class com.example.demo.DemoApplication
+2026-10-02T13:49:25.474+05:00 DEBUG 18956 --- [demo] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@34c01041
+2026-10-02T13:49:25.857+05:00  INFO 18956 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T13:49:25.871+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.example.demo'. Automatic @Repository and @Entity scanning is enabled.
+2026-10-02T13:49:25.872+05:00  INFO 18956 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-10-02T13:49:26.186+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\pikol\.m2\repository\org\springframework\boot\spring-boot-web-server\4.1.1\spring-boot-web-server-4.1.1.jar
+2026-10-02T13:49:26.190+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\pikol\.m2\repository\org\springframework\boot\spring-boot-web-server\4.1.1\spring-boot-web-server-4.1.1.jar
+2026-10-02T13:49:26.191+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-10-02T13:49:26.212+05:00  INFO 18956 --- [demo] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T13:49:26.226+05:00  INFO 18956 --- [demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T13:49:26.226+05:00  INFO 18956 --- [demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T13:49:26.279+05:00 DEBUG 18956 --- [demo] [           main] b.w.c.s.WebApplicationContextInitializer : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-10-02T13:49:26.280+05:00  INFO 18956 --- [demo] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 806 ms
+2026-10-02T13:49:26.294+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-10-02T13:49:26.294+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-10-02T13:49:26.314+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.s.f.OrderedRequestContextFilter    : Filter 'requestContextFilter' configured for use
+2026-10-02T13:49:26.315+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-10-02T13:49:26.315+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.s.filter.OrderedFormContentFilter  : Filter 'formContentFilter' configured for use
+2026-10-02T13:49:26.393+05:00  INFO 18956 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T13:49:26.520+05:00  INFO 18956 --- [demo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a02e34b
+2026-10-02T13:49:26.522+05:00  INFO 18956 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T13:49:26.634+05:00  INFO 18956 --- [demo] [           main] liquibase.database                       : Set default schema name to public
+2026-10-02T13:49:28.146+05:00  INFO 18956 --- [demo] [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-10-02T13:49:28.183+05:00  INFO 18956 --- [demo] [           main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-10-02T13:49:28.185+05:00  INFO 18956 --- [demo] [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : UPDATE SUMMARY
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : Run:                          0
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : Previously run:               3
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : Filtered out:                 0
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : -------------------------------
+2026-10-02T13:49:28.192+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : Total change sets:            3
+2026-10-02T13:49:28.193+05:00  INFO 18956 --- [demo] [           main] liquibase.util                           : Update summary generated
+2026-10-02T13:49:28.194+05:00  INFO 18956 --- [demo] [           main] liquibase.command                        : Command execution complete
+2026-10-02T13:49:28.266+05:00  INFO 18956 --- [demo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T13:49:28.310+05:00  INFO 18956 --- [demo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T13:49:28.642+05:00  INFO 18956 --- [demo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T13:49:28.712+05:00  INFO 18956 --- [demo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T13:49:29.019+05:00  INFO 18956 --- [demo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T13:49:29.052+05:00  INFO 18956 --- [demo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:49:29.140+05:00  WARN 18956 --- [demo] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T13:49:29.215+05:00 DEBUG 18956 --- [demo] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2026-10-02T13:49:29.232+05:00 DEBUG 18956 --- [demo] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-10-02T13:49:29.252+05:00 DEBUG 18956 --- [demo] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-10-02T13:49:29.283+05:00 DEBUG 18956 --- [demo] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-10-02T13:49:29.353+05:00  INFO 18956 --- [demo] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T13:49:29.358+05:00 DEBUG 18956 --- [demo] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration matched:
+      - @ConditionalOnClass found required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataJpaRepositoriesAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.data.jpa.repositories.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceConfiguration.Hikari matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceInitializationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+      - SQL InitializationDatabase Initialization default value is EMBEDDED (OnSqlInitializationCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate', 'org.springframework.transaction.TransactionManager' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   DataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DispatcherServletAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
+      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
+      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.DispatcherServletRegistrationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
+      - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.autoconfigure.error.ErrorViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.web.error.whitelabel.enabled=true) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HibernateJpaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager', 'org.hibernate.engine.spi.SessionImplementor' (OnClassCondition)
+
+   HibernateJpaConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.servlet.encoding.enabled=true) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConvertersCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration#jacksonJsonMapper matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration#jsonFactory matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.core.json.JsonFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration#jsonMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JsonProblemDetailsConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.ProblemDetail' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) found bean 'jacksonJsonMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration#jacksonJsonHttpMessageConvertersCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.JacksonJsonHttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedJacksonJsonHttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJacksonJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcClientAutoConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; SearchStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactoryBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jpa.EntityManagerFactoryBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#jpaVendorAdapter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.JpaVendorAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#transactionManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.JpaWebConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.jpa.open-in-view=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor,org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration#persistenceManagedTypes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.persistenceunit.PersistenceManagedTypes; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JtaAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.transaction.Transaction' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.jta.enabled=true) matched (OnPropertyCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   LiquibaseAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'liquibase.integration.spring.SpringLiquibase', 'liquibase.change.DatabaseChange' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.liquibase.enabled=true) matched (OnPropertyCondition)
+      - AnyNestedCondition 2 matched 1 did not; NestedCondition on LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.LiquibaseUrlCondition @ConditionalOnProperty (spring.liquibase.url) did not find property 'spring.liquibase.url'; NestedCondition on LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.JdbcConnectionDetailsCondition @ConditionalOnBean (types: org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails; SearchStrategy: all) found bean 'jdbcConnectionDetails'; NestedCondition on LiquibaseAutoConfiguration.LiquibaseDataSourceCondition.DataSourceBeanCondition @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource' (LiquibaseAutoConfiguration.LiquibaseDataSourceCondition)
+
+   LiquibaseAutoConfiguration.CustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'liquibase.integration.spring.Customizer' (OnClassCondition)
+
+   LiquibaseAutoConfiguration.LiquibaseConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jdbc.core.ConnectionCallback' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: liquibase.integration.spring.SpringLiquibase; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LiquibaseAutoConfiguration.LiquibaseConfiguration#liquibaseConnectionDetails matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.liquibase.autoconfigure.LiquibaseConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MultipartAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.servlet.multipart.enabled=true) matched (OnPropertyCondition)
+
+   MultipartAutoConfiguration#multipartConfigElement matched:
+      - @ConditionalOnMissingBean (types: jakarta.servlet.MultipartConfigElement; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MultipartAutoConfiguration#multipartResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration#persistenceExceptionTranslationPostProcessor matched:
+      - @ConditionalOnBooleanProperty (spring.persistence.exceptiontranslation.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   SslAutoConfiguration#sslBundleRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.SslBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TomcatServletWebServerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.ServletRequest', 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol', 'org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   TomcatServletWebServerAutoConfiguration#tomcatServletWebServerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.server.servlet.ServletWebServerFactory; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   TomcatWebServerConfiguration matched:
+      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
+
+   TomcatWebServerConfiguration.TomcatWebSocketConfiguration matched:
+      - @ConditionalOnClass found required class 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
+
+   TransactionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a single bean 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionManagerCustomizationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionManagerCustomizationAutoConfiguration#platformTransactionManagerCustomizers matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizers; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnMissingClass found unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   DataJpaRepositoriesAutoConfiguration#entityManagerFactoryBootstrapExecutorCustomizer:
+      Did not match:
+         - @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=deferred) did not find property 'spring.data.jpa.repositories.bootstrap-mode' (OnPropertyCondition)
+
+   DataRepositoryMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean did not find required type 'io.micrometer.core.instrument.MeterRegistry' (OnBeanCondition)
+
+   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
+      Did not match:
+         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
+
+   DataSourceCheckpointRestoreConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
+
+   DataSourceConfiguration.Dbcp2:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourceConfiguration.Generic:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCondition)
+
+   DataSourceConfiguration.OracleUcp:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSourceImpl', 'oracle.jdbc.OracleConnection' (OnClassCondition)
+
+   DataSourceConfiguration.Tomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceHealthContributorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator' (OnClassCondition)
+
+   DataSourceJmxConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSource', 'oracle.jdbc.OracleConnection' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourcePoolMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   HibernateMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.CborConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.cbor.CBORMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.XmlConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'spring.datasource.jndi-name' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   JndiJtaConfiguration:
+      Did not match:
+         - @ConditionalOnJndi JNDI environment is not available (OnJndiCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.transaction.jta.JtaTransactionManager' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   KotlinSerializationHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'kotlinx.serialization.Serializable', 'kotlinx.serialization.json.Json' (OnClassCondition)
+
+   LazyConnectionDataSourceConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.connection-fetch=lazy) did not find property 'spring.datasource.connection-fetch' (OnPropertyCondition)
+
+   LiquibaseAutoConfiguration.CustomizerConfiguration#springLiquibaseCustomizer:
+      Did not match:
+         - @ConditionalOnBean (types: liquibase.integration.spring.Customizer; SearchStrategy: all) did not find any beans of type liquibase.integration.spring.Customizer (OnBeanCondition)
+
+   LiquibaseEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   ServletHttpExchangesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean did not find required type 'org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository' (OnBeanCondition)
+
+   ServletManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' (OnClassCondition)
+
+   ServletMappingsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
+
+   ServletWebServerConfiguration#forwardedHeaderFilter:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerWrapperConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans of type org.springframework.scheduling.annotation.AsyncConfigurer (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorContextPropagationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshot' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerBuilder (OnBeanCondition)
+
+   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TomcatMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.binder.tomcat.TomcatMetrics' (OnClassCondition)
+
+   TomcatReactiveManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
+
+   TomcatReactiveWebServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+
+   TomcatServletManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
+
+   TomcatServletWebServerAutoConfiguration#tomcatForwardedHeaderFilterCustomizer:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   TomcatWebServerConfiguration#tomcatVirtualThreadsProtocolHandlerCustomizer:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TransactionAutoConfiguration#transactionalOperator:
+      Did not match:
+         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mvc.hiddenmethod.filter.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebMvcHealthEndpointExtensionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.actuate.endpoint.HealthEndpoint' (OnClassCondition)
+
+   WebMvcMappingsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
+
+   WebMvcObservationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties' (OnClassCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.jdbc.XADataSourceWrapper; SearchStrategy: all) did not find any beans of type org.springframework.boot.jdbc.XADataSourceWrapper (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'jakarta.transaction.TransactionManager', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2026-10-02T13:49:29.361+05:00  INFO 18956 --- [demo] [           main] com.example.demo.DemoApplication         : Started DemoApplication in 4.28 seconds (process running for 4.582)
+2026-10-02T13:49:29.361+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-10-02T13:49:29.363+05:00 DEBUG 18956 --- [demo] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-10-02T13:49:33.077+05:00  INFO 18956 --- [demo] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T13:49:33.078+05:00  INFO 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T13:49:33.078+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-10-02T13:49:33.078+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-10-02T13:49:33.080+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7575f7e1
+2026-10-02T13:49:33.080+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@62f73b0c
+2026-10-02T13:49:33.080+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-10-02T13:49:33.081+05:00  INFO 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-02T13:49:33.088+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T13:49:33.096+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T13:49:33.210+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T13:49:33.223+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:49:33.224+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T13:49:33.244+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:49:33.254+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T13:49:33.254+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T13:49:33.256+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:33.256+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T13:49:33.304+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:49:33.345+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T13:49:33.389+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:49:33.897+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-026", parameters={}
+2026-10-02T13:49:33.898+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T13:49:33.907+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs":[{"name (truncated)...]
+2026-10-02T13:49:33.908+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:33.908+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:49:33.909+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:33.910+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:49:33.912+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:49:33.913+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE passport_projects SET body=?,revision=revision+1,updated_at=NOW() WHERE id=?]
+2026-10-02T13:49:33.928+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:49:33.928+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO passport_audit(project_id,actor,organization,action,details) VALUES (?,?,?,?,?)]
+2026-10-02T13:49:33.932+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:49:33.933+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [{id=PR-026, saved=true}]
+2026-10-02T13:49:33.935+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:49:34.282+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/projects/PR-MUQO55NE/ifc/95333412-4c26-4a43-984e-c4b1013b8218/elements", parameters={}
+2026-10-02T13:49:34.282+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/projects/PR-MUQO55NE/ifc/95333412-4c26-4a43-984e-c4b1013b8218", parameters={}
+2026-10-02T13:49:34.288+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#ifcElements(String, UUID, HttpServletRequest)
+2026-10-02T13:49:34.288+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#ifcFile(String, UUID, HttpServletRequest)
+2026-10-02T13:49:34.289+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:34.289+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:34.290+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:49:34.290+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:49:34.290+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:34.291+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT file_name,body FROM passport_ifc_versions WHERE id=? AND project_id=?]
+2026-10-02T13:49:34.293+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:49:34.293+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT body FROM passport_ifc_versions WHERE id=? AND project_id=?]
+2026-10-02T13:49:34.922+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/x-step' in response
+2026-10-02T13:49:35.230+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{49534f2d31303330332d32313b0d0a4845414445523b0d0a46494c455f4445534352495054494f4e2828275669657744656 (truncated)...]
+2026-10-02T13:49:35.575+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:49:36.593+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:49:36.627+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [{schema=IFC4, counts={WALL=357, OPENINGELEMENT=1140, DOOR=48, WINDOW=1092, COLUMN=1925, SLAB=61, ROO (truncated)...]
+2026-10-02T13:49:36.674+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:56:15.882+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T13:56:15.883+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T13:56:15.885+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T13:56:15.888+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:56:15.889+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T13:56:15.890+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:56:15.898+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T13:56:15.899+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T13:56:15.899+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:56:15.899+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T13:56:15.932+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:56:15.953+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T13:56:15.975+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:56:15.991+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T13:56:15.992+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T13:56:15.993+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T13:56:15.994+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:56:15.995+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T13:56:15.996+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:56:16.006+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T13:56:16.006+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T13:56:16.007+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:56:16.008+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T13:56:16.040+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:56:16.064+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T13:56:16.083+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:56:16.175+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-026", parameters={}
+2026-10-02T13:56:16.176+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T13:56:16.180+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs":[{"name (truncated)...]
+2026-10-02T13:56:16.180+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:56:16.181+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:56:16.182+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:56:16.182+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:56:16.186+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:56:16.187+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE passport_projects SET body=?,revision=revision+1,updated_at=NOW() WHERE id=?]
+2026-10-02T13:56:16.190+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:56:16.190+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO passport_audit(project_id,actor,organization,action,details) VALUES (?,?,?,?,?)]
+2026-10-02T13:56:16.192+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:56:16.192+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [{id=PR-026, saved=true}]
+2026-10-02T13:56:16.194+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:57:55.548+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T13:57:55.549+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T13:57:55.550+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T13:57:55.551+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:57:55.551+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T13:57:55.551+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:57:55.557+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T13:57:55.557+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T13:57:55.557+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:57:55.558+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T13:57:55.586+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:57:55.605+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T13:57:55.636+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:57:55.751+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-026", parameters={}
+2026-10-02T13:57:55.752+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T13:57:55.756+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs":[{"name (truncated)...]
+2026-10-02T13:57:55.756+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:57:55.756+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:57:55.759+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:57:55.759+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:57:55.760+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:57:55.761+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE passport_projects SET body=?,revision=revision+1,updated_at=NOW() WHERE id=?]
+2026-10-02T13:57:55.763+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:57:55.763+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO passport_audit(project_id,actor,organization,action,details) VALUES (?,?,?,?,?)]
+2026-10-02T13:57:55.764+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:57:55.764+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [{id=PR-026, saved=true}]
+2026-10-02T13:57:55.765+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:57:56.173+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-MUQO55NE", parameters={}
+2026-10-02T13:57:56.174+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T13:57:56.177+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"Телеграф · образец IFC","address":"Екатеринбург","version":2,"docs":[],"items":[{"id":"К (truncated)...]
+2026-10-02T13:57:56.179+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:57:56.180+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:57:56.182+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:57:56.183+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:57:56.186+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:57:56.186+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE passport_projects SET body=?,revision=revision+1,updated_at=NOW() WHERE id=?]
+2026-10-02T13:57:56.189+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:57:56.190+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO passport_audit(project_id,actor,organization,action,details) VALUES (?,?,?,?,?)]
+2026-10-02T13:57:56.196+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:57:56.197+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [{id=PR-MUQO55NE, saved=true}]
+2026-10-02T13:57:56.198+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:59:13.168+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T13:59:13.169+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T13:59:13.171+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T13:59:13.171+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:59:13.171+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T13:59:13.172+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:59:13.177+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T13:59:13.177+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T13:59:13.178+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:59:13.178+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T13:59:13.200+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:59:13.212+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T13:59:13.225+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T13:59:13.338+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-026", parameters={}
+2026-10-02T13:59:13.339+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T13:59:13.340+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs":[{"name (truncated)...]
+2026-10-02T13:59:13.341+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:59:13.341+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:59:13.342+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T13:59:13.343+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T13:59:13.344+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:59:13.344+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE passport_projects SET body=?,revision=revision+1,updated_at=NOW() WHERE id=?]
+2026-10-02T13:59:13.346+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2026-10-02T13:59:13.347+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO passport_audit(project_id,actor,organization,action,details) VALUES (?,?,?,?,?)]
+2026-10-02T13:59:13.348+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T13:59:13.348+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{id=PR-026, saved=true}]
+2026-10-02T13:59:13.348+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T14:00:08.813+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/login", parameters={}
+2026-10-02T14:00:08.814+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#login(LoginRequest, HttpServletResponse)
+2026-10-02T14:00:08.816+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest[role=customer, password=demo123]]
+2026-10-02T14:00:08.816+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T14:00:08.817+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{actor=USER-CUSTOMER, role=customer}]
+2026-10-02T14:00:08.817+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T14:00:08.822+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/projects", parameters={}
+2026-10-02T14:00:08.823+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#projects(HttpServletRequest)
+2026-10-02T14:00:08.823+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T14:00:08.823+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE customer_org=? OR factory_org=? ORDER BY id]
+2026-10-02T14:00:08.846+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-02T14:00:08.860+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{PR-026={"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs" (truncated)...]
+2026-10-02T14:00:08.870+05:00 DEBUG 18956 --- [demo] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-02T14:00:08.993+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/api/projects/PR-026", parameters={}
+2026-10-02T14:00:08.994+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.demo.PassportApi#save(String, JsonNode, HttpServletRequest)
+2026-10-02T14:00:08.997+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"project":"ЖК «Лесной квартал»","address":"Екатеринбург, ул. Лесная, 24","version":3,"docs":[{"name (truncated)...]
+2026-10-02T14:00:08.997+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2026-10-02T14:00:08.998+05:00 DEBUG 18956 --- [demo] [io-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM passport_projects WHERE id=?]
+2026-10-02T14:00:08.998+05:00 DEBUG 18956 --- [demo]

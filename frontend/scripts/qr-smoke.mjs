@@ -1,0 +1,23 @@
+import { chromium } from 'playwright-core'
+
+const browser = await chromium.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true })
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+const errors = []
+page.on('dialog', dialog => dialog.accept('demo123'))
+page.on('pageerror', error => errors.push(error.message))
+await page.goto('http://127.0.0.1:5173/')
+const frame = page.frameLocator('iframe[title="Digital Passport"]')
+await frame.getByRole('button', { name: /Технический заказчик/ }).click()
+await frame.locator('.project-card').first().waitFor()
+const app = page.frame({ url: /passport\.html/ })
+await app.evaluate(() => go('passport'))
+await app.evaluate(() => qr())
+const id = await app.evaluate(() => selected)
+const image = await frame.locator('dialog[open] svg').screenshot()
+await frame.locator('dialog[open] button[aria-label="Закрыть"]').click()
+await app.evaluate(() => go('projects'))
+await app.evaluate(() => scan())
+await frame.locator('#qrPhoto').setInputFiles({ name: 'qr.png', mimeType: 'image/png', buffer: image })
+await frame.locator('.tabs').waitFor({ timeout: 30000 })
+console.log(JSON.stringify({ id, selected: await app.evaluate(() => selected), page: await app.evaluate(() => page), errors }))
+await browser.close()

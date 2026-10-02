@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Passport · IFC</title>
+  <title>Digital Passport · модель проекта</title>
   <style>
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; font: 14px Arial, sans-serif; color: #24344a; }
     #scene { width: 100%; height: 100%; background: #eaf0f6; }
@@ -16,16 +16,12 @@
     button { cursor: pointer; border: 1px solid #c4cfda; background: #fff; border-radius: 6px; color: #183459; padding: 6px 9px; white-space: nowrap; }
     button:hover { background: #e8f0f9; }
     #status { position: absolute; z-index: 2; left: 16px; bottom: 16px; right: 16px; width: fit-content; max-width: calc(100% - 32px); padding: 9px 12px; border-radius: 7px; background: #10233ce8; color: white; }
-    @media(max-width: 600px) { .panel { flex-direction: column; } .info { max-width: 100%; } }
   </style>
 </head>
 <body>
   <div id="scene"></div>
-  <div class="panel">
-    <div class="info"><strong id="element-name">Загрузка элемента IFC</strong><small id="element-meta"></small></div>
-    <div class="controls"><button id="fit" type="button">Вписать</button><button id="wire" type="button">Каркас</button></div>
-  </div>
+  <div class="panel"><div class="info"><strong id="element-name">Вся модель проекта</strong><small id="element-meta"></small></div><div class="controls"><button id="fit" type="button">Вписать</button><button id="wire" type="button">Каркас</button></div></div>
   <div id="status" role="status">Загрузка IFC-модели…</div>
-  <script type="module" src="/src/ifc-viewer.js"></script>
+  <script type="module" src="/src/project-viewer.js"></script>
 </body>
 </html>

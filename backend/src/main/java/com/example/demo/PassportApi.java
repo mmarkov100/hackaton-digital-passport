@@ -29,7 +29,8 @@ import java.util.regex.Pattern;
 public class PassportApi {
     private static final String CUSTOMER_ORG = "ORG-CUSTOMER";
     private static final String FACTORY_ORG = "ORG-URAL";
-    private static final Pattern ELEMENT = Pattern.compile("^#(\\d+)\\s*=\\s*IFC(COLUMN|BEAM|SLAB|WALL|FOOTING)\\('([^']+)',[^,]*,('(?:[^']|'')*'|\\$)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ELEMENT = Pattern.compile("^#(\\d+)\\s*=\\s*IFC(COLUMN|BEAM|SLAB|WALL|FOOTING|REINFORCINGBAR|OPENINGELEMENT|DOOR|WINDOW|ROOF|STAIRFLIGHT|RAILING)\\('([^']+)',[^,]*,('(?:[^']|'')*'|\\$)", Pattern.CASE_INSENSITIVE);
+    private static final Set<String> PASSPORT_TYPES = Set.of("COLUMN", "BEAM", "SLAB", "WALL", "FOOTING");
     private static final Pattern STOREY = Pattern.compile("^#(\\d+)\\s*=\\s*IFCBUILDINGSTOREY\\('(?:[^']|'')*',[^,]*,'((?:[^']|'')*)'", Pattern.CASE_INSENSITIVE);
     private static final Pattern UNICODE = Pattern.compile("\\\\X2\\\\([0-9A-Fa-f]+)\\\\X0\\\\");
     private final JdbcTemplate jdbc;
@@ -246,13 +247,33 @@ public class PassportApi {
         customer(request); row(id, session(request));
         if (file.isEmpty() || file.getSize() > 100L * 1024 * 1024 || !Objects.requireNonNullElse(file.getOriginalFilename(), "").toLowerCase(Locale.ROOT).endsWith(".ifc"))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Нужен IFC-файл до 100 МБ");
+        Map<String, Object> parsed = parseIfc(file.getInputStream(), false);
+        @SuppressWarnings("unchecked") List<Map<String, String>> elements = (List<Map<String, String>>) parsed.get("elements");
+        @SuppressWarnings("unchecked") Map<String, Integer> counts = (Map<String, Integer>) parsed.get("counts");
+        UUID modelId = UUID.randomUUID();
+        jdbc.update("INSERT INTO passport_ifc_versions(id,project_id,file_name,body,actor) VALUES (?,?,?,?,?)",
+            modelId, id, file.getOriginalFilename(), file.getBytes(), session(request).actor());
+        audit(id, session(request), "ifc.preview", file.getOriginalFilename() + ": " + counts);
+        return Map.of("schema", "IFC4", "counts", counts, "elements", elements, "fileId", modelId.toString(), "truncated", counts.values().stream().mapToInt(Integer::intValue).sum() > elements.size());
+    }
+
+    @GetMapping("/projects/{id}/ifc/{fileId}/elements")
+    public Map<String, Object> ifcElements(@PathVariable String id, @PathVariable UUID fileId, HttpServletRequest request) throws Exception {
+        row(id, session(request));
+        List<byte[]> bodies = jdbc.query("SELECT body FROM passport_ifc_versions WHERE id=? AND project_id=?",
+            (rs, rowNum) -> rs.getBytes(1), fileId, id);
+        if (bodies.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        return parseIfc(new java.io.ByteArrayInputStream(bodies.get(0)), true);
+    }
+
+    private Map<String, Object> parseIfc(java.io.InputStream input, boolean fullModel) throws Exception {
         List<Map<String, String>> elements = new ArrayList<>();
         Map<String, String> storeys = new HashMap<>();
         Map<String, String> elementRefs = new HashMap<>();
         Map<String, String> floorRefs = new HashMap<>();
         Map<String, Integer> counts = new LinkedHashMap<>();
         boolean ifc4 = false;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8), 65536)) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8), 65536)) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (line.contains("FILE_SCHEMA(('IFC4'))")) ifc4 = true;
@@ -273,13 +294,12 @@ public class PassportApi {
                 Matcher m = ELEMENT.matcher(line);
                 if (!m.find()) continue;
                 String type = m.group(2).toUpperCase(Locale.ROOT);
+                if (!fullModel && !PASSPORT_TYPES.contains(type)) continue;
                 counts.merge(type, 1, Integer::sum);
                 String rawName = m.group(4);
                 String name = "$".equals(rawName) ? "" : decodeIfc(rawName.substring(1, rawName.length()-1));
-                if (elements.size() < 10000) {
-                    elementRefs.put(m.group(3), m.group(1));
-                    elements.add(new HashMap<>(Map.of("globalId", m.group(3), "expressId", m.group(1), "type", type, "name", name)));
-                }
+                elementRefs.put(m.group(3), m.group(1));
+                elements.add(new HashMap<>(Map.of("globalId", m.group(3), "expressId", m.group(1), "type", type, "name", name)));
             }
         }
         for (Map<String, String> element : elements) {
@@ -287,11 +307,7 @@ public class PassportApi {
             element.put("floor", storeys.getOrDefault(storeyRef, "Не указан"));
         }
         if (!ifc4) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Ожидается IFC4");
-        UUID modelId = UUID.randomUUID();
-        jdbc.update("INSERT INTO passport_ifc_versions(id,project_id,file_name,body,actor) VALUES (?,?,?,?,?)",
-            modelId, id, file.getOriginalFilename(), file.getBytes(), session(request).actor());
-        audit(id, session(request), "ifc.preview", file.getOriginalFilename() + ": " + counts);
-        return Map.of("schema", "IFC4", "counts", counts, "elements", elements, "fileId", modelId.toString(), "truncated", counts.values().stream().mapToInt(Integer::intValue).sum() > elements.size());
+        return Map.of("schema", "IFC4", "counts", counts, "elements", elements, "truncated", counts.values().stream().mapToInt(Integer::intValue).sum() > elements.size());
     }
     private static String decodeIfc(String name) {
         Matcher matcher = UNICODE.matcher(name);

@@ -1,1 +1,1 @@
-﻿export default function App() { return <iframe title="Контур ЖБИ" src="/passport.html" className="passport-frame" /> }
+﻿export default function App() { return <iframe title="Digital Passport" src="/passport.html" className="passport-frame" /> }
