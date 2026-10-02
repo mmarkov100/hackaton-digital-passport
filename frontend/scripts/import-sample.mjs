@@ -1,0 +1,40 @@
+import { chromium } from 'playwright-core'
+
+const browser = await chromium.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true })
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+page.on('dialog', dialog => dialog.accept('demo123'))
+const errors = []
+page.on('pageerror', error => errors.push(error.message))
+page.on('response', response => { if (response.url().includes('/api/') && response.status() >= 400) errors.push(`${response.status()} ${response.url()}`) })
+await page.goto('http://127.0.0.1:5173/')
+const frame = page.frameLocator('iframe[title="Контур ЖБИ"]')
+await frame.getByRole('button', { name: /Технический заказчик/ }).click()
+await frame.locator('.project-card').first().waitFor()
+const app = page.frame({ url: /passport\.html/ })
+const sampleId = await app.evaluate(() => projectMeta.find(meta => meta.name === 'Телеграф · образец IFC')?.id)
+if (sampleId) {
+  await app.evaluate(id => switchProject(id), sampleId)
+} else {
+  await app.evaluate(() => createProject())
+  await frame.locator('dialog[open] input[name="name"]').fill('Телеграф · образец IFC')
+  await frame.locator('dialog[open] input[name="address"]').fill('Екатеринбург')
+  await frame.locator('dialog[open] input[name="place"]').fill('Екатеринбург')
+  await frame.locator('dialog[open] input[name="contact"]').fill('Мария Соколова')
+  await frame.locator('dialog[open] textarea[name="description"]').fill('Демонстрация просмотра реальных элементов из Telegraf_bez_arm.ifc')
+  const created = page.waitForResponse(response => response.url().includes('/api/projects/PR-') && response.request().method() === 'PUT' && response.ok())
+  await frame.locator('dialog[open] button[type="submit"]').click()
+  await created
+  await app.evaluate(() => importIFC())
+  await frame.locator('dialog[open] input[type="file"]').setInputFiles('../Telegraf_bez_arm.ifc')
+  await frame.locator('dialog[open] button[type="submit"]').click()
+  await frame.locator('#ifcRows .ifc-row').first().waitFor({ timeout: 120000 })
+  const columns = frame.locator('#ifcRows .ifc-row').filter({ hasText: 'COLUMN' })
+  for (let i = 0; i < 3; i++) await columns.nth(i).locator('input[type="checkbox"]').check()
+  await frame.locator('dialog[open] button[type="submit"]').click()
+}
+await frame.locator('iframe[title^="3D-модель"]').waitFor({ timeout: 120000 })
+await frame.frameLocator('iframe[title^="3D-модель"]').locator('#status').filter({ hasText: 'Элемент IFC' }).waitFor({ timeout: 120000 })
+await frame.locator('iframe[title^="3D-модель"]').scrollIntoViewIfNeeded()
+await page.screenshot({ path: 'sample-viewer.png' })
+console.log(JSON.stringify({ projectId: await app.evaluate(() => activeProject), errors }))
+await browser.close()

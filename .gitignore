@@ -1,0 +1,5 @@
+.edge-test/
+.vscode/
+frontend/node_modules/
+frontend/dist/
+backend/target/
